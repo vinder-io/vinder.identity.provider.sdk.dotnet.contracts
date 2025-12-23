@@ -3,12 +3,12 @@ namespace Vinder.IdentityProvider.Sdk.Contracts.Clients;
 public interface IGroupsClient
 {
     public Task<Result<GroupDetails>> CreateGroupAsync(
-        GroupForCreation group,
+        GroupCreationScheme group,
         CancellationToken cancellation = default
     );
 
     public Task<Result<GroupDetails>> UpdateGroupAsync(
-        GroupUpdateContext group,
+        GroupUpdateScheme group,
         CancellationToken cancellation = default
     );
 
@@ -18,7 +18,8 @@ public interface IGroupsClient
     );
 
     public Task<Result<GroupDetails>> AssignGroupPermissionAsync(
-        AssignGroupPermission data,
+        string groupId,
+        string permission,
         CancellationToken cancellation = default
     );
 

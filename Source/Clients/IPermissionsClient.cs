@@ -8,11 +8,11 @@ public interface IPermissionsClient
     );
 
     public Task<Result<PermissionDetails>> CreatePermissionAsync(
-        PermissionForCreation permission,
+        PermissionCreationScheme permission,
         CancellationToken cancellation = default
     );
     public Task<Result<PermissionDetails>> UpdatePermissionAsync(
-        PermissionForUpdate permission,
+        PermissionUpdateScheme permission,
         CancellationToken cancellation = default
     );
 

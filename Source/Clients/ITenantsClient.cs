@@ -8,12 +8,12 @@ public interface ITenantsClient
     );
 
     public Task<Result<TenantDetails>> CreateTenantAsync(
-        TenantForCreation tenant,
+        TenantCreationScheme tenant,
         CancellationToken cancellation = default
     );
 
     public Task<Result<TenantDetails>> UpdateTenantAsync(
-        TenantForUpdate tenant,
+        TenantUpdateScheme tenant,
         CancellationToken cancellation = default
     );
 

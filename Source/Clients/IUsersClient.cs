@@ -3,7 +3,7 @@ namespace Vinder.IdentityProvider.Sdk.Contracts.Clients;
 public interface IUsersClient
 {
     public Task<Result<Pagination<UserDetails>>> GetUsersAsync(
-        UsersFetchParameters parameters,
+        UsersFetchParameters? parameters = null,
         CancellationToken cancellation = default
     );
 
@@ -24,13 +24,15 @@ public interface IUsersClient
         CancellationToken cancellation = default
     );
 
-    public Task<Result> AssignUserToGroupAsync(
-        AssignUserToGroupContext data,
+    public Task<Result> AssignUserGroupAsync(
+        string userId,
+        string groupId,
         CancellationToken cancellation = default
     );
 
     public Task<Result> AssignUserPermissionAsync(
-        AssignUserPermissionContext data,
+        string userId,
+        string permission,
         CancellationToken cancellation = default
     );
 
