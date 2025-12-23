@@ -1,6 +1,6 @@
-namespace Vinder.IdentityProvider.Sdk.Contracts.Payloads.Permission;
+namespace Vinder.IdentityProvider.Sdk.Contracts.Payloads.Tenant;
 
-public sealed record PermissionForCreation
+public sealed record TenantCreationScheme
 {
     public string Name { get; init; } = default!;
     public string? Description { get; init; } = default!;

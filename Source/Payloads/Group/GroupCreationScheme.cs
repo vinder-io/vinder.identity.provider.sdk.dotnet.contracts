@@ -1,8 +1,6 @@
 namespace Vinder.IdentityProvider.Sdk.Contracts.Payloads.Group;
 
-public sealed record GroupUpdateContext
+public sealed record GroupCreationScheme
 {
-    [JsonIgnore]
-    public string Id { get; init; } = default!;
     public string Name { get; init; } = default!;
 }
