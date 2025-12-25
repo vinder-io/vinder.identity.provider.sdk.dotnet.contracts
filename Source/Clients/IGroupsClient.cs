@@ -2,6 +2,11 @@ namespace Vinder.IdentityProvider.Sdk.Contracts.Clients;
 
 public interface IGroupsClient
 {
+    public Task<Result<Pagination<GroupDetails>>> GetGroupsAsync(
+        GroupsFetchParameters? parameters = null,
+        CancellationToken cancellation = default
+    );
+
     public Task<Result<GroupDetails>> CreateGroupAsync(
         GroupCreationScheme group,
         CancellationToken cancellation = default
