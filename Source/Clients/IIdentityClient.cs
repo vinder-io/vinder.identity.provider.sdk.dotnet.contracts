@@ -7,7 +7,7 @@ public interface IIdentityClient
         CancellationToken cancellation = default
     );
 
-    public Task<Result> CreateIdentityAsync(
+    public Task<Result<UserDetails>> CreateIdentityAsync(
         IdentityEnrollmentCredentials credentials,
         CancellationToken cancellation = default
     );
